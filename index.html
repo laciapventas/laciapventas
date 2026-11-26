@@ -40,7 +40,7 @@
       border-radius: 50%;
       background: rgba(37, 37, 37, 0.75);
       color: #fff;
-      font-size: 20px;
+      font-size: 20px; 
       line-height: 1;
       cursor: pointer;
       display: grid;
@@ -570,7 +570,7 @@
     const closeBtn = modal.querySelector(".catalog-modal-close");
 
     // Cambia ".catalogo img" por la clase de tu contenedor del catálogo si tiene otro nombre
-    document.querySelectorAll(".catalogo img").forEach((img) => {
+    document.querySelectorAll("catalogo").forEach((img) => {
       img.style.cursor = "pointer";
       img.addEventListener("click", () => {
         modalImg.src = img.currentSrc || img.src;
