@@ -672,7 +672,7 @@
     <p id="lightboxCaption"></p>
   </dialog>
 
-  <!-- Ventana modal compacta para ver completa la imagen del catálogo al hacer clic -->
+  <!-- Ventana modal compacta para ver completa la imagen del catálogo o instalaciones al hacer clic -->
   <div id="catalogModal" class="catalog-modal" aria-hidden="true">
     <div class="catalog-modal-box" role="dialog" aria-modal="true">
       <button type="button" class="catalog-modal-close" aria-label="Cerrar">&times;</button>
@@ -804,7 +804,7 @@
     })();
   </script>
 
-  <!-- Script 3: abre la imagen del catálogo en tamaño moderado al hacer clic sobre ella -->
+  <!-- Script 3: abre la imagen del catálogo o de instalaciones en tamaño moderado al hacer clic sobre ella -->
   <script>
     (function () {
       const modal = document.getElementById("catalogModal");
@@ -812,8 +812,8 @@
       const modalCaption = document.getElementById("catalogModalCaption");
       const closeBtn = modal.querySelector(".catalog-modal-close");
 
-      // Busca solo las fotos dentro de la sección #catalogo
-      document.querySelectorAll("#catalogo .catalog-image img").forEach((img) => {
+      // Busca las fotos dentro de #catalogo y de #instalaciones
+      document.querySelectorAll("#catalogo .catalog-image img, #instalaciones .catalog-image img").forEach((img) => {
         img.style.cursor = "pointer";
         img.addEventListener("click", (e) => {
           e.preventDefault();
@@ -822,7 +822,7 @@
           if (!src) return;
 
           modalImg.src = src;
-          modalImg.alt = img.alt || "Imagen del catálogo";
+          modalImg.alt = img.alt || "Imagen ampliada";
           modalCaption.textContent = img.alt || "";
           modal.classList.add("is-open");
           modal.setAttribute("aria-hidden", "false");
@@ -854,10 +854,3 @@
   </script>
 </body>
 </html>
-```[cite: 3]
-
-### ¿Qué se organizó y comentó en este archivo?
-* **Secciones identificadas:** Cada bloque principal (`Inicio`, `Catálogo`, `Sobre nosotros`, `Instalaciones`, `Galería`, `Cotizar`, `Contacto` y `Pie de página`) tiene una etiqueta clara para ubicarlo rápido sin perderse.
-* **Scripts separados y explicados:** Cada `<script>` al final del archivo indica qué función cumple (carruseles, navegación por secciones y ventana ampliada del catálogo) sin alterar ninguna regla ni dato existente[cite: 3].
-
-Si quieres que también agregue comentarios explicativos a `css/styles.css` con la misma idea, avísame y te lo preparo[cite: 2].
