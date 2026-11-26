@@ -69,6 +69,13 @@
     .gallery-track::-webkit-scrollbar { display: none; }
     .gallery-track .gallery-item { flex: 0 0 calc(33.333% - 0.85rem); min-width: 270px; height: 300px; }
     .gallery-track .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Alineación de íconos en redes sociales del pie de página */
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
   </style>
 </head>
 <body>
@@ -647,17 +654,35 @@
           <h4>Contacto</h4>
           <p>Cl. 10 #27-05 Local 201A<br>Los Mártires, Bogotá, Colombia</p>
           <a href="https://wa.me/573162854493" target="_blank" rel="noopener noreferrer">+57 316 285 4493</a>
+          <!-- Redes sociales del pie de página con íconos -->
           <div class="footer-social">
-            <a href="https://www.instagram.com/laciapuntocom/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://web.facebook.com/Laciaestampados/" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://www.tiktok.com/@laciapuntocom" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a href="https://www.instagram.com/laciapuntocom/" target="_blank" rel="noopener noreferrer">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              Instagram
+            </a>
+            <a href="https://web.facebook.com/Laciaestampados/" target="_blank" rel="noopener noreferrer">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+              Facebook
+            </a>
+            <a href="https://www.tiktok.com/@laciapuntocom" target="_blank" rel="noopener noreferrer">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
+              TikTok
+            </a>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <span>© <span id="year"></span> Lacia Puntocom. Todos los derechos reservados.</span>
-        <a href="#arriba">Volver arriba ↑</a>
+        <a href="#arriba" id="volverArriba">Volver arriba ↑</a>
       </div>
     </div>
   </footer>
@@ -738,7 +763,7 @@
     });
   </script>
 
-  <!-- Script 2: controla qué sección se muestra al navegar por el menú o enlaces -->
+  <!-- Script 2: controla qué sección se muestra al navegar por el menú o enlaces y el botón Volver arriba -->
   <script>
     (function () {
       const vistasValidas = ["inicio", "catalogo", "nosotros", "instalaciones", "galeria", "contacto", "cotizar"];
@@ -782,8 +807,17 @@
       const hashInicial = window.location.hash.replace("#", "");
       activarVista(vistasValidas.includes(hashInicial) ? hashInicial : "inicio", false);
 
-      // Clic en menú, logo, footer y botones internos de sección
+      // Clic en "Volver arriba ↑"
       document.addEventListener("click", (e) => {
+        const btnArriba = e.target.closest("#volverArriba, a[href='#arriba']");
+        if (btnArriba) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          history.replaceState(null, "", "#arriba");
+          return;
+        }
+
+        // Clic en menú, logo, footer y botones internos de sección
         const enlace = e.target.closest("a[href^='#']");
         if (!enlace) return;
 
