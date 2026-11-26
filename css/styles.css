@@ -54,7 +54,7 @@ body.vista-por-seccion[data-vista="cotizar"] #cotizar {
 
 .catalog-modal-box {
   position: relative;
-  width: min(90vw, 540px);
+  width: min(90vw, 480px);
   max-height: 82vh;
   background: #ffffff;
   border-radius: 12px;
