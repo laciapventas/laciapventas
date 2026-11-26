@@ -569,11 +569,15 @@
     const modalCaption = document.getElementById("catalogModalCaption");
     const closeBtn = modal.querySelector(".catalog-modal-close");
 
-    // Cambia ".catalogo img" por la clase de tu contenedor del catálogo si tiene otro nombre
-    document.querySelectorAll("catalogo").forEach((img) => {
+    document.querySelectorAll("#catalogo .catalog-image img").forEach((img) => {
       img.style.cursor = "pointer";
-      img.addEventListener("click", () => {
-        modalImg.src = img.currentSrc || img.src;
+      img.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const src = img.currentSrc || img.getAttribute("src");
+        if (!src) return;
+
+        modalImg.src = src;
         modalImg.alt = img.alt || "Imagen del catálogo";
         modalCaption.textContent = img.alt || "";
         modal.classList.add("is-open");
@@ -591,7 +595,13 @@
     modal.addEventListener("click", (e) => {
       if (e.target === modal) closeCatalogModal();
     });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("is-open")) {
+        closeCatalogModal();
+      }
+    });
   })();
 </script>
 </body>
 </html>
+```[cite: 3]
