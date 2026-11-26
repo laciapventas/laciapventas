@@ -34,8 +34,9 @@ body.vista-por-seccion[data-vista="cotizar"] #cotizar {
 .footer-col > a.is-active-view {
   color: var(--orange);
   font-weight: 600;
-.lightbox-modal[aria-hidden="true"] {
-  display: none;
+
 }
   
 }
+.lightbox-modal[aria-hidden="true"] {
+  display: none;
