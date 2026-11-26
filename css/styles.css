@@ -36,7 +36,5 @@ body.vista-por-seccion[data-vista="cotizar"] #cotizar {
   font-weight: 600;
 
 }
-.lightbox-modal[aria-hidden="true"] {
-  display: none;  
-}
+
 
