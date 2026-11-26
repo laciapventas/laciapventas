@@ -69,13 +69,6 @@
     .gallery-track::-webkit-scrollbar { display: none; }
     .gallery-track .gallery-item { flex: 0 0 calc(33.333% - 0.85rem); min-width: 270px; height: 300px; }
     .gallery-track .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
-
-    /* Alineación de íconos en redes sociales del pie de página */
-    .footer-social a {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
   </style>
 </head>
 <body>
@@ -581,4 +574,283 @@
     <!-- SECCIÓN 05: CONTACTO Y UBICACIÓN -->
     <section class="contact-section section-anchor" id="contacto">
       <div class="container">
-        <div class="section-heading contact
+        <div class="section-heading contact-heading reveal">
+          <div>
+            <span class="eyebrow">05 / CONTACTO</span>
+            <h2>Hagamos que tu idea<br><em>se ponga en marcha.</em></h2>
+          </div>
+          <p>Estamos en Bogotá. Escríbenos por tus canales de contacto o consulta cómo llegar a nuestro punto de atención.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-details reveal">
+            <div class="contact-card">
+              <span class="contact-icon">⌖</span>
+              <span>
+                <small>DIRECCIÓN</small>
+                <b>Cl. 10 #27-05 Local 201A</b>
+                <em>Los Mártires, Bogotá, Colombia</em>
+              </span>
+            </div>
+
+            <div class="contact-card">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+                </svg>
+              </span>
+              <span>
+                <small>ENCUÉNTRANOS EN REDES</small>
+                <b class="social-inline">
+                  <a href="https://www.instagram.com/laciapuntocom/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+                  <a href="https://web.facebook.com/Laciaestampados/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+                  <a href="https://www.tiktok.com/@laciapuntocom" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+                </b>
+              </span>
+            </div>
+          </div>
+
+          <div class="map-wrap reveal">
+            <iframe title="Mapa de ubicación de Lacia Puntocom en Bogotá" src="https://www.google.com/maps?q=Laciapuntocom%2C%20Cl.%2010%20%2327-05%20Local%20201A%2C%20Los%20M%C3%A1rtires%2C%20Bogot%C3%A1%2C%20Colombia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <a class="map-directions" href="https://www.google.com/maps/dir/?api=1&destination=Laciapuntocom%2C%20Cl.%2010%20%2327-05%20Local%20201A%2C%20Los%20M%C3%A1rtires%2C%20Bogot%C3%A1%2C%20Colombia" target="_blank" rel="noopener noreferrer">Cómo llegar <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand brand-light" href="#inicio">
+            <img class="brand-logo" src="images/portada/logo-transparente.webp" alt="Lacia Puntocom" style="height: 44px; width: auto; object-fit: contain;">
+            <span class="brand-name">LACIA  PUNTOCOM<small>IMPRESIÓN Y ESTAMPADO DIGITAL</small></span>
+          </a>
+          <p>Ideas, impresión y personalización. Creamos productos que ayudan a comunicar lo que quieres expresar.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explora</h4>
+          <a href="#inicio" data-vista-solo="inicio">Inicio</a>
+          <a href="#catalogo" data-vista-solo="catalogo">Catálogo</a>
+          <a href="#nosotros" data-vista-solo="nosotros">Sobre nosotros</a>
+          <a href="#instalaciones" data-vista-solo="instalaciones">Instalaciones</a>
+          <a href="#galeria" data-vista-solo="galeria">Galería</a>
+          <a href="#contacto" data-vista-solo="contacto">Contacto</a>
+          <a href="#cotizar" data-vista-solo="cotizar">Cotizar</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <p>Cl. 10 #27-05 Local 201A<br>Los Mártires, Bogotá, Colombia</p>
+          <a href="https://wa.me/573162854493" target="_blank" rel="noopener noreferrer">+57 316 285 4493</a>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/laciapuntocom/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://web.facebook.com/Laciaestampados/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.tiktok.com/@laciapuntocom" target="_blank" rel="noopener noreferrer">TikTok</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Lacia Puntocom. Todos los derechos reservados.</span>
+        <a href="#arriba">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/573162854493?text=Hola%20Lacia%20Puntocom%2C%20quiero%20hacer%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener noreferrer" aria-label="Contactar a Lacia Puntocom por WhatsApp">✆</a>
+
+  <!-- Ventana ampliada para fotografías de la galería -->
+  <dialog class="lightbox" id="lightbox" aria-label="Vista ampliada de fotografía">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Cerrar imagen">×</button>
+    <img id="lightboxImage" src="" alt="">
+    <p id="lightboxCaption"></p>
+  </dialog>
+
+  <!-- Ventana modal compacta para ver completa la imagen del catálogo o instalaciones al hacer clic -->
+  <div id="catalogModal" class="catalog-modal" aria-hidden="true">
+    <div class="catalog-modal-box" role="dialog" aria-modal="true">
+      <button type="button" class="catalog-modal-close" aria-label="Cerrar">&times;</button>
+      <img id="catalogModalImg" src="" alt="">
+      <p id="catalogModalCaption" class="catalog-modal-caption"></p>
+    </div>
+  </div>
+
+  <!-- Script principal del sitio (formulario, galería, etc.) -->
+  <script src="js/main.js" defer></script>
+
+  <!-- Script 1: hace funcionar los botones de pasar fotos (‹ y ›) en los carruseles -->
+  <script>
+    /* Inicialización directa de carruseles */
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".carousel").forEach((carousel) => {
+        if (carousel.dataset.carouselReady) return;
+        carousel.dataset.carouselReady = "true";
+
+        const slides = carousel.querySelectorAll(".carousel-slide");
+        const prevBtn = carousel.querySelector(".prev");
+        const nextBtn = carousel.querySelector(".next");
+
+        if (slides.length <= 1) {
+          if (prevBtn) prevBtn.style.display = "none";
+          if (nextBtn) nextBtn.style.display = "none";
+          return;
+        }
+
+        let current = 0;
+        const showSlide = (index) => {
+          slides[current].classList.remove("is-active");
+          current = (index + slides.length) % slides.length;
+          slides[current].classList.add("is-active");
+        };
+
+        prevBtn?.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          showSlide(current - 1);
+        });
+
+        nextBtn?.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          showSlide(current + 1);
+        });
+
+        const interval = parseInt(carousel.dataset.autoplay, 10);
+        if (interval) {
+          setInterval(() => showSlide(current + 1), interval);
+        }
+      });
+
+      const galleryTrack = document.getElementById("galleryTrack");
+      const galPrev = document.getElementById("galPrev");
+      const galNext = document.getElementById("galNext");
+      if (galleryTrack && galPrev && galNext && !galleryTrack.dataset.carouselReady) {
+        galleryTrack.dataset.carouselReady = "true";
+        galPrev.addEventListener("click", () => galleryTrack.scrollBy({ left: -340, behavior: "smooth" }));
+        galNext.addEventListener("click", () => galleryTrack.scrollBy({ left: 340, behavior: "smooth" }));
+      }
+    });
+  </script>
+
+  <!-- Script 2: controla qué sección se muestra al navegar por el menú o enlaces -->
+  <script>
+    (function () {
+      const vistasValidas = ["inicio", "catalogo", "nosotros", "instalaciones", "galeria", "contacto", "cotizar"];
+      const body = document.body;
+      body.classList.add("vista-por-seccion");
+
+      const marcarEnlaceActivo = (destinoId) => {
+        document.querySelectorAll("header .nav-links a[href^='#'], .footer-col a[href^='#']").forEach((a) => {
+          const idEnlace = a.dataset.vistaSolo || a.getAttribute("href").slice(1);
+          const esActivo = idEnlace === destinoId;
+          a.classList.toggle("is-active-view", esActivo);
+          if (esActivo) {
+            a.setAttribute("aria-current", "page");
+          } else {
+            a.removeAttribute("aria-current");
+          }
+        });
+      };
+
+      const revelarElementos = (seccion) => {
+        if (!seccion) return;
+        seccion.querySelectorAll(".reveal").forEach((el) => {
+          el.classList.add("is-visible");
+        });
+      };
+
+      const activarVista = (vistaId, hacerScroll = true) => {
+        const destinoId = vistasValidas.includes(vistaId) ? vistaId : "inicio";
+        body.setAttribute("data-vista", destinoId);
+        marcarEnlaceActivo(destinoId);
+
+        const seccionActiva = document.getElementById(destinoId);
+        revelarElementos(seccionActiva);
+
+        if (hacerScroll && seccionActiva) {
+          seccionActiva.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      };
+
+      // Al cargar la página: muestra solo "inicio" (a menos que la URL traiga un #hash válido)
+      const hashInicial = window.location.hash.replace("#", "");
+      activarVista(vistasValidas.includes(hashInicial) ? hashInicial : "inicio", false);
+
+      // Clic en menú, logo, footer y botones internos de sección
+      document.addEventListener("click", (e) => {
+        const enlace = e.target.closest("a[href^='#']");
+        if (!enlace) return;
+
+        const targetId = enlace.dataset.vistaSolo || enlace.getAttribute("href").slice(1);
+        if (!vistasValidas.includes(targetId)) return;
+
+        e.preventDefault();
+        activarVista(targetId, true);
+        history.replaceState(null, "", `#${targetId}`);
+
+        const navLinks = document.getElementById("navLinks");
+        const menuToggle = document.getElementById("menuToggle");
+        if (navLinks && navLinks.classList.contains("is-open")) {
+          navLinks.classList.remove("is-open");
+          menuToggle?.setAttribute("aria-expanded", "false");
+        }
+      });
+    })();
+  </script>
+
+  <!-- Script 3: abre la imagen del catálogo o de instalaciones en tamaño moderado al hacer clic sobre ella -->
+  <script>
+    (function () {
+      const modal = document.getElementById("catalogModal");
+      const modalImg = document.getElementById("catalogModalImg");
+      const modalCaption = document.getElementById("catalogModalCaption");
+      const closeBtn = modal.querySelector(".catalog-modal-close");
+
+      // Busca las fotos dentro de #catalogo y de #instalaciones
+      document.querySelectorAll("#catalogo .catalog-image img, #instalaciones .catalog-image img").forEach((img) => {
+        img.style.cursor = "pointer";
+        img.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const src = img.currentSrc || img.getAttribute("src");
+          if (!src) return;
+
+          modalImg.src = src;
+          modalImg.alt = img.alt || "Imagen ampliada";
+          modalCaption.textContent = img.alt || "";
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      // Cierra la ventana ampliada y limpia la imagen cargada
+      function closeCatalogModal() {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        modalImg.src = "";
+      }
+
+      // Cerrar al pulsar la "X"
+      closeBtn.addEventListener("click", closeCatalogModal);
+
+      // Cerrar al hacer clic en el fondo oscuro fuera de la tarjeta
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeCatalogModal();
+      });
+
+      // Cerrar al presionar la tecla Escape
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("is-open")) {
+          closeCatalogModal();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
