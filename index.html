@@ -554,5 +554,44 @@
       });
     })();
   </script>
+	<div id="catalogModal" class="catalog-modal" aria-hidden="true">
+  <div class="catalog-modal-box" role="dialog" aria-modal="true">
+    <button type="button" class="catalog-modal-close" aria-label="Cerrar">&times;</button>
+    <img id="catalogModalImg" src="" alt="">
+    <p id="catalogModalCaption" class="catalog-modal-caption"></p>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const modal = document.getElementById("catalogModal");
+    const modalImg = document.getElementById("catalogModalImg");
+    const modalCaption = document.getElementById("catalogModalCaption");
+    const closeBtn = modal.querySelector(".catalog-modal-close");
+
+    // Cambia ".catalogo img" por la clase de tu contenedor del catálogo si tiene otro nombre
+    document.querySelectorAll(".catalogo img").forEach((img) => {
+      img.style.cursor = "pointer";
+      img.addEventListener("click", () => {
+        modalImg.src = img.currentSrc || img.src;
+        modalImg.alt = img.alt || "Imagen del catálogo";
+        modalCaption.textContent = img.alt || "";
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+      });
+    });
+
+    function closeCatalogModal() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      modalImg.src = "";
+    }
+
+    closeBtn.addEventListener("click", closeCatalogModal);
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeCatalogModal();
+    });
+  })();
+</script>
 </body>
 </html>
