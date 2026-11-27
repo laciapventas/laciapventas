@@ -678,14 +678,14 @@ h2 em {
 }
 
 .idea-card {
-  background: var(--ink);
-  color: #fff;
-  border-color: var(--ink);
+  background: #fff;
+  color: var(--ink);
+  border-color: #eadfd5;
 }
 
 .idea-art {
   height: 220px;
-  background: #302e2c;
+  background: var(--cream);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -694,13 +694,14 @@ h2 em {
   color: var(--orange);
   font-size: 110px;
   font-weight: 700;
+  border-bottom: 1px solid #f0e7df;
 }
 
 .idea-art:before,
 .idea-art:after {
   content: "";
   position: absolute;
-  border: 1px solid rgba(255, 159, 67, .35);
+  border: 1px solid rgba(243, 107, 33, .28);
   border-radius: 50%;
   width: 220px;
   height: 220px;
@@ -727,11 +728,11 @@ h2 em {
 }
 
 .idea-card .catalog-body p {
-  color: #c2bbb5;
+  color: var(--muted);
 }
 
 .idea-card .catalog-body h3 {
-  color: #fff;
+  color: var(--ink);
 }
 
 /* ==========================================================================
