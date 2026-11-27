@@ -678,14 +678,15 @@ h2 em {
 }
 
 .idea-card {
-  background: #fff;
-  color: var(--ink);
-  border-color: #eadfd5;
+  background: #252525;
+  color: #fff;
+  border-color: #252525;
+  overflow: hidden;
 }
 
 .idea-art {
   height: 220px;
-  background: var(--cream);
+  background: #252525;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -694,14 +695,14 @@ h2 em {
   color: var(--orange);
   font-size: 110px;
   font-weight: 700;
-  border-bottom: 1px solid #f0e7df;
+  border-radius: 12px 12px 0 0;
 }
 
 .idea-art:before,
 .idea-art:after {
   content: "";
   position: absolute;
-  border: 1px solid rgba(243, 107, 33, .28);
+  border: 1px solid rgba(243, 107, 33, .35);
   border-radius: 50%;
   width: 220px;
   height: 220px;
@@ -728,13 +729,12 @@ h2 em {
 }
 
 .idea-card .catalog-body p {
-  color: var(--muted);
+  color: #d6d6d6;
 }
 
 .idea-card .catalog-body h3 {
-  color: var(--ink);
+  color: #fff;
 }
-
 /* ==========================================================================
    5. SECCIÓN SOBRE NOSOTROS
    ========================================================================== */
